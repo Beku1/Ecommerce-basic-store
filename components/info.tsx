@@ -14,9 +14,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
 
   const cart = useCart()
 
-  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
-    event.stopPropagation()
-
+  const onAddToCart = () => {
     cart.addItem(data)
   }
 
