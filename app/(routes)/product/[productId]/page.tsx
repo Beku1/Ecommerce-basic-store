@@ -18,7 +18,6 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
     categoryId: product?.category?.id,
   })
 
-  const suggestedProducts = suggestedProds.filter((item)=>item.id!==params.productId)
 
 
   return (
@@ -34,7 +33,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
             </div>
           </div>
           <hr className='my-10' />
-          <ProductList title="Related items" items={suggestedProducts} />
+          <ProductList title="Related items" items={suggestedProds} />
         </div>
       </Container>
     </div>
